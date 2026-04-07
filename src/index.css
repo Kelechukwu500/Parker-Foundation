@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 320px;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+a:hover {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* shared button foundation */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 28px;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid transparent;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* primary */
+.btn-primary {
+  background: #e8751a;
+  color: #ffffff;
+  border-color: #e8751a;
+}
+
+.btn-primary:hover {
+  background: #d86612;
+  border-color: #d86612;
+}
+
+/* secondary */
+.btn-secondary {
+  background: #ffffff;
+  color: #1f3552;
+  border-color: rgba(31, 53, 82, 0.12);
+}
+
+.btn-secondary:hover {
+  background: #f8fafc;
+  border-color: rgba(31, 53, 82, 0.2);
+}
+
+/* h1 {
+  font-size: inherit;
+  line-height: inherit;
+} */
+
+/* ----------------------------------------
+   Marquee animation (used in Hero.jsx)
+   ---------------------------------------- */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  display: flex;
+  animation: marquee 15s linear infinite;
+}

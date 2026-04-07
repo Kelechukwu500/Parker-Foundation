@@ -1,0 +1,10 @@
+/* App.css — intentionally minimal.
+   The Vite default #root styles (max-width: 1280px, padding: 2rem,
+   text-align: center) were squishing the entire app into a centered
+   column. Removed completely so Tailwind controls all layout. */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
