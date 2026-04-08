@@ -71,7 +71,7 @@ import PlatinumTierPartnerForm from "./CorporateForm/PlatinumTierPartnerForm";
 //Success Stories PDFs//
 import JulietStoryPDF from "./Stories/JulietPDF";
 import EmpoweringCommunitiesPDF from "./Stories/EmpoweringCommunitiesPDF";
-import BreakingbarriersPDF from "./Stories/BreakingbarriersPDF";
+import BreakingbarriersPDF from "./Stories/BreakingBarriersPDF";
 
 
 //Dropdown Visible Pages//
@@ -159,7 +159,7 @@ const App = () => {
         {/* Success Stories PDFs */}
         <Route path="/juliet-story-pdf" element={<JulietStoryPDF />} />
         <Route path="/empowering-communities-pdf" element={<EmpoweringCommunitiesPDF />} />
-        <Route path="/breaking-barriers-pdf" element={<BreakingbarriersPDF />} />
+        <Route path="/breaking-barriers-pdf" element={<BreakingBarriersPDF />} />
 
 
         {/* Dropdown Visible Pages */}
