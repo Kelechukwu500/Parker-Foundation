@@ -1,5 +1,5 @@
 import React from "react";
-import StudentChamp from "../assets/studentchamp.jpg";
+import StudentChamp from "../assets/StudentChamp.jpg";
 import { Link } from "react-router-dom";
 
 
