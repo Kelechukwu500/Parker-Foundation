@@ -1,11 +1,11 @@
 // ProjectsClosestGoal.jsx
 import React from "react";
-import HealthClinic from "../assets/healthclinic.jpg";
-import MedicalSup from "../assets/medicalsup.jpg";
-import Maternal from "../assets/maternal.jpg";
-import HealthTrain from "../assets/healthtrain.jpg";
-import Emergency from "../assets/emergency.jpg";
-import Vaccination from "../assets/vaccination.jpg";
+import HealthClinic from "../assets/HealthClinic.jpg";
+import MedicalSup from "../assets/MedicalSup.jpg";
+import Maternal from "../assets/Maternal.jpg";
+import HealthTrain from "../assets/HealthTrain.jpg";
+import Emergency from "../assets/Emergency.jpg";
+import Vaccination from "../assets/Vaccination.jpg";
 import { Link } from "react-router-dom";
 
 // Sample data for Health Care projects in Kenya

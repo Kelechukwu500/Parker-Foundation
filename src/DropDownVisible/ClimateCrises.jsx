@@ -1,11 +1,11 @@
 // ClimateCrises.jsx
 import React from "react";
-import climateFarm from "../assets/climatefarm.jpg";
-import Irrigation from "../assets/irrigation.jpg";
-import Agroforestory from "../assets/agroforestory.jpg";
-import FarmerTraining from "../assets/farmertraining.jpg";
-import SeedDistribution from "../assets/seeddistribution.jpg";
-import PoweredIrri from "../assets/poweredirri.jpg";
+import climateFarm from "../assets/ClimateFarm.jpg";
+import Irrigation from "../assets/Irrigation.jpg";
+import Agroforestory from "../assets/Agroforestory.jpg";
+import FarmerTraining from "../assets/FarmerTraining.jpg";
+import SeedDistribution from "../assets/SeedDistribution.jpg";
+import PoweredIrri from "../assets/PoweredIrri.jpg";
 import { Link } from "react-router-dom";
 
 // Sample data for Climate Action projects

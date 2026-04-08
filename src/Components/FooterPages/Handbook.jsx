@@ -1,7 +1,8 @@
 import React from "react";
-import Care from "../../assets/care.jpg"; // Replace with your image path
+import Care from "../../assets/Care.jpg"; // Replace with your image path
 import HandbookPDF from "../HandbookPDF.jsx"; // PDF download component
 import { Link } from "react-router-dom";
+
 const Handbook = () => {
   return (
     <section className="py-16 bg-gray-200">

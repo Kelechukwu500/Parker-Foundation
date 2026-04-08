@@ -1,5 +1,5 @@
 import React from "react";
-import SafeHavenimg from "../assets/safehaven.jpg"; 
+import SafeHavenimg from "../assets/SafeHaven.jpg"; 
 import { Link } from "react-router-dom";
 
 

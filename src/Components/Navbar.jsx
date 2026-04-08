@@ -3,7 +3,7 @@ import { FaBars, FaTimes, FaSearch, FaChevronDown, FaArrowRight } from "react-ic
 import Fuse from "fuse.js";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Logo1 from "../assets/logo1.jpg";
+import Logo1 from "../assets/Logo1.jpg";
 
 const pageList = [
   { label: "Home", path: "/" },

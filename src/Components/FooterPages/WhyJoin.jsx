@@ -1,5 +1,5 @@
 import React from "react";
-import Champion from "../../assets/champion.jpg"; // Replace with your image path
+import Champion from "../../assets/Champion.jpg"; // Replace with your image path
 import { Link } from "react-router-dom";
 
 const WhyJoin = () => {

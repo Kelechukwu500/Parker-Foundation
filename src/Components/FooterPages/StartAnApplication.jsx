@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Application from "../../assets/application.jpg"; // Replace with your image path
+import Application from "../../assets/Application.jpg"; // Replace with your image path
 import { db, storage } from "../../Firebase"; // ✅ Added Firebase imports
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";

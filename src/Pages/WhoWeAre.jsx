@@ -14,11 +14,11 @@ import {
   FaPrayingHands,
   FaCross,
 } from "react-icons/fa";
-import Vision from "../assets/vision.jpg";
-import Mission from "../assets/mission.jpg";
-import AboutUs from "../assets/aboutus.jpg";
-import Donation from "../assets/donation.jpg";
-import Trust from "../assets/trust.jpg";
+import Vision from "../assets/Vision.jpg";
+import Mission from "../assets/Mission.jpg";
+import AboutUs from "../assets/AboutUs.jpg";
+import Donation from "../assets/Donation.jpg";
+import Trust from "../assets/Trust.jpg";
 
 const values = [
   {

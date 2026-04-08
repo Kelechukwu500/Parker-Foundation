@@ -3,13 +3,13 @@ import { FaBalanceScale, FaBrain, FaCross, FaHandHoldingHeart, FaHeart, FaMounta
 import { Link } from "react-router-dom";
 
 import { FaLightbulb, FaRoad, FaHandsHelping, FaLeaf } from "react-icons/fa";
-import Problem from "../assets/problem.jpg";
-import Neglect from "../assets/neglect.jpg";
-import Solutions from "../assets/solutions.jpg";
-import Solution from "../assets/solution.jpg";
-import Dignity2 from "../assets/dignity2.jpg";
-import About1 from "../assets/about1.jpg";
-import Issue1 from "../assets/issue1.jpg";
+import Problem from "../assets/Problem.jpg";
+import Neglect from "../assets/Neglect.jpg";
+import Solutions from "../assets/Solutions.jpg";
+import Solution from "../assets/Solution.jpg";
+import Dignity2 from "../assets/Dignity2.jpg";
+import About1 from "../assets/About1.jpg";
+import Issue1 from "../assets/Issue1.jpg";
 
 // Carousel Auto-Scrolling
 import Photo23 from "../assets/Photo23.jpg";

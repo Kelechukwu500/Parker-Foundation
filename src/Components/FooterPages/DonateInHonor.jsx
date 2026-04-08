@@ -1,5 +1,5 @@
 import React from "react";
-import Justice1 from "../../assets/justice1.jpg"; // Replace with your image path
+import Justice1 from "../../assets/Justice1.jpg"; // Replace with your image path
 import { Link } from "react-router-dom"; 
 
 const DonateInHonor = () => {

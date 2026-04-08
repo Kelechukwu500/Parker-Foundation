@@ -1,11 +1,11 @@
 // Wellness.jsx
 import React from "react";
-import Photo23 from "../assets/photo23.jpg";
-import Photo26 from "../assets/photo26.jpg";
-import Photo2 from "../assets/photo2.jpg";
-import MobileCamp from "../assets/mobilecamp.jpg";
-import Vaccination from "../assets/vaccination.jpg";
-import Photo25 from "../assets/photo25.jpg";
+import Photo23 from "../assets/Photo23.jpg";
+import Photo26 from "../assets/Photo26.jpg";
+import Photo2 from "../assets/Photo2.jpg";
+import MobileCamp from "../assets/MobileCamp.jpg";
+import Vaccination from "../assets/Vaccination.jpg";
+import Photo25 from "../assets/Photo25.jpg";
 import { Link } from "react-router-dom";
 
 // Sample data for Physical Health projects in Uganda

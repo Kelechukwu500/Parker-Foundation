@@ -2,78 +2,78 @@
 import React from "react";
 
 // Carousel Auto-Scrolling
-import Share from "../assets/share.jpg";
-import Photo24 from "../assets/photo24.jpg";
-import Justice1 from "../assets/justice1.jpg";
-import StudentChamp from "../assets/studentchamp.jpg";
-import Photo27 from "../assets/photo27.jpg";
-import Photo28 from "../assets/photo28.jpg";
-import Photo29 from "../assets/photo29.jpg";
-import Photo30 from "../assets/photo30.jpg";
-import Photo31 from "../assets/photo31.jpg";
+import Share from "../assets/Share.jpg";
+import Photo24 from "../assets/Photo24.jpg";
+import Justice1 from "../assets/Justice1.jpg";
+import StudentChamp from "../assets/StudentChamp.jpg";
+import Photo27 from "../assets/Photo27.jpg";
+import Photo28 from "../assets/Photo28.jpg";
+import Photo29 from "../assets/Photo29.jpg";
+import Photo30 from "../assets/Photo30.jpg";
+import Photo31 from "../assets/Photo31.jpg";
 
 
 // Top Funded Projects Images//
-import Photo10 from "../assets/photo10.jpg";
-import Photo5 from "../assets/photo5.jpg";
-import Care from "../assets/care.jpg";
-import Renovation from "../assets/renovation.jpg";
-import Lab from "../assets/lab.jpg";
-import Teachers from "../assets/teachers.jpg";
+import Photo10 from "../assets/Photo10.jpg";
+import Photo5 from "../assets/Photo5.jpg";
+import Care from "../assets/Care.jpg";
+import Renovation from "../assets/Renovation.jpg";
+import Lab from "../assets/Lab.jpg";
+import Teachers from "../assets/Teachers.jpg";
 
 
 // Climate Action Projects Images//
-import climateFarm from "../assets/climatefarm.jpg";
-import Irrigation from "../assets/irrigation.jpg";
-import Agroforestory from "../assets/agroforestory.jpg";
-import FarmerTraining from "../assets/farmertraining.jpg";
-import SeedDistribution from "../assets/seeddistribution.jpg";
-import PoweredIrri from "../assets/poweredirri.jpg";
+import climateFarm from "../assets/ClimateFarm.jpg";
+import Irrigation from "../assets/Irrigation.jpg";
+import Agroforestory from "../assets/Agroforestory.jpg";
+import FarmerTraining from "../assets/FarmerTraining.jpg";
+import SeedDistribution from "../assets/SeedDistribution.jpg";
+import PoweredIrri from "../assets/PoweredIrri.jpg";
 
 
 // Most Effective Projects Images//
-import Gardens from "../assets/gardens.jpg";
-import SchoolFeeding from "../assets/schoolfeeding.jpg";
-import FarmingSupport from "../assets/farmingsupport.jpg";
-import WaterConservation from "../assets/waterconservation.jpg";
-import Workshop from "../assets/workshop.jpg";
-import FoodStorage from "../assets/foodstorage.jpg";
+import Gardens from "../assets/Gardens.jpg";
+import SchoolFeeding from "../assets/SchoolFeeding.jpg";
+import FarmingSupport from "../assets/FarmingSupport.jpg";
+import WaterConservation from "../assets/WaterConservation.jpg";
+import Workshop from "../assets/Workshop.jpg";
+import FoodStorage from "../assets/FoodStorage.jpg";
 
 
 // Newest Projects Images//
-import Aisha from "../assets/aisha.jpg";
-import Women from "../assets/women.jpg";
-import SafeSpace from "../assets/safespace.jpg";
-import WomenPower from "../assets/womenpower.jpg";
-import Hygiene from "../assets/hygiene.jpg";
-import Entrepreneur from "../assets/entrepreneur.jpg";
+import Aisha from "../assets/Aisha.jpg";
+import Women from "../assets/Women.jpg";
+import SafeSpace from "../assets/SafeSpace.jpg";
+import WomenPower from "../assets/WomenPower.jpg";
+import Hygiene from "../assets/Hygiene.jpg";
+import Entrepreneur from "../assets/Entrepreneur.jpg";
 
 
 // Projects Closest to Goal Images//
-import HealthClinic from "../assets/healthclinic.jpg";
-import MedicalSup from "../assets/medicalsup.jpg";
-import Maternal from "../assets/maternal.jpg";
-import HealthTrain from "../assets/healthtrain.jpg";
-import Emergency from "../assets/emergency.jpg";
-import Vaccination2 from "../assets/vaccination2.jpg";
+import HealthClinic from "../assets/HealthClinic.jpg";
+import MedicalSup from "../assets/MedicalSup.jpg";
+import Maternal from "../assets/Maternal.jpg";
+import HealthTrain from "../assets/HealthTrain.jpg";
+import Emergency from "../assets/Emergency.jpg";
+import Vaccination2 from "../assets/Vaccination2.jpg";
 
 
 // Wellness Projects Images//
-import Photo23 from "../assets/photo23.jpg";
-import Photo26 from "../assets/photo26.jpg";
-import Photo2 from "../assets/photo2.jpg";
-import MobileCamp from "../assets/mobilecamp.jpg";
-import Vaccination from "../assets/vaccination.jpg";
-import Photo25 from "../assets/photo25.jpg";
+import Photo23 from "../assets/Photo23.jpg";
+import Photo26 from "../assets/Photo26.jpg";
+import Photo2 from "../assets/Photo2.jpg";
+import MobileCamp from "../assets/MobileCamp.jpg";
+import Vaccination from "../assets/Vaccination.jpg";
+import Photo25 from "../assets/Photo25.jpg";
 
 
 // Crises Info Images//
-import Crises8 from "../assets/crises8.jpg";
-import Crises4 from "../assets/crises4.jpg";
-import Crises3 from "../assets/crises3.jpg";
-import Crises14 from "../assets/crises14.jpg";
-import Crises15 from "../assets/crises15.jpg";
-import Crises16 from "../assets/crises16.jpg";
+import Crises8 from "../assets/Crises8.jpg";
+import Crises4 from "../assets/Crises4.jpg";
+import Crises3 from "../assets/Crises3.jpg";
+import Crises14 from "../assets/Crises14.jpg";
+import Crises15 from "../assets/Crises15.jpg";
+import Crises16 from "../assets/Crises16.jpg";
 import { Link } from "react-router-dom";
 
 const BrowseAllProjects = () => {

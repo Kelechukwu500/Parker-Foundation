@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Graduation1 from "../assets/graduation1.jpg";
-import Care from "../assets/care.jpg";
-import Champion from "../assets/champion.jpg";
-import Strenght1 from "../assets/strenght1.jpg";
-import Family from "../assets/family.jpg";
-import Impact from "../assets/impact.jpg";
-import Protective from "../assets/protective.jpg";
-import Healthier from "../assets/healthier.jpg";
-import Caring from "../assets/caring.jpg";
-import Justice1 from "../assets/justice1.jpg";
-import Healing from "../assets/healing.jpg";
-import Change from "../assets/change.jpg";
+import Graduation1 from "../assets/Graduation1.jpg";
+import Care from "../assets/Care.jpg";
+import Champion from "../assets/Champion.jpg";
+import Strenght1 from "../assets/Strenght1.jpg";
+import Family from "../assets/Family.jpg";
+import Impact from "../assets/Impact.jpg";
+import Protective from "../assets/Protective.jpg";
+import Healthier from "../assets/Healthier.jpg";
+import Caring from "../assets/Caring.jpg";
+import Justice1 from "../assets/Justice1.jpg";
+import Healing from "../assets/Healing.jpg";
+import Change from "../assets/Change.jpg";
 
 const programCards = [
   {

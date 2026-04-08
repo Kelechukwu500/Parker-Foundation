@@ -7,9 +7,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 // Import images
-import Aisha from "../../assets/aisha.jpg";
-import Photo2 from "../../assets/photo2.jpg";
-import John from "../../assets/john.jpg";
+import Aisha from "../../assets/Aisha.jpg";
+import Photo2 from "../../assets/Photo2.jpg";
+import John from "../../assets/John.jpg";
 
 const stories = [
   {

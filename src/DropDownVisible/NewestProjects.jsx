@@ -1,11 +1,11 @@
 // NewestProjects.jsx
 import React from "react";
-import Aisha from "../assets/aisha.jpg";
-import Women from "../assets/women.jpg";
-import SafeSpace from "../assets/safespace.jpg";
-import WomenPower from "../assets/womenpower.jpg";
-import Hygiene from "../assets/hygiene.jpg";
-import Entrepreneur from "../assets/entrepreneur.jpg";
+import Aisha from "../assets/Aisha.jpg";
+import Women from "../assets/Women.jpg";
+import SafeSpace from "../assets/SafeSpace.jpg";
+import WomenPower from "../assets/WomenPower.jpg";
+import Hygiene from "../assets/Hygiene.jpg";
+import Entrepreneur from "../assets/Entrepreneur.jpg";
 import { Link } from "react-router-dom";
 
 // Sample data for newest Gender Equality projects

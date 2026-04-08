@@ -1,20 +1,20 @@
 import React from "react";
 import { FiShield } from "react-icons/fi";
 import { motion } from "framer-motion";
-import Bill from "../assets/bill.jpg";
+import Bill from "../assets/Bill.jpg";
 import { Link } from "react-router-dom";
 
 
 // Carousel Auto-Scrolling
-import Photo23 from "../assets/photo23.jpg";
-import Photo24 from "../assets/photo24.jpg";
-import Photo25 from "../assets/photo25.jpg";
-import Photo26 from "../assets/photo26.jpg";
-import Photo27 from "../assets/photo27.jpg";
-import Photo28 from "../assets/photo28.jpg";
-import Photo29 from "../assets/photo29.jpg";
-import Photo30 from "../assets/photo30.jpg";
-import Photo31 from "../assets/photo31.jpg";
+import Photo23 from "../assets/Photo23.jpg";
+import Photo24 from "../assets/Photo24.jpg";
+import Photo25 from "../assets/Photo25.jpg";
+import Photo26 from "../assets/Photo26.jpg";
+import Photo27 from "../assets/Photo27.jpg";
+import Photo28 from "../assets/Photo28.jpg";
+import Photo29 from "../assets/Photo29.jpg";
+import Photo30 from "../assets/Photo30.jpg";
+import Photo31 from "../assets/Photo31.jpg";
 
 
 

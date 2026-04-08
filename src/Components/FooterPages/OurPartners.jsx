@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; 
 
 // Import your company logos here
-import ParkerLogo from "../../assets/parkerlogo.jpg";
+import ParkerLogo from "../../assets/ParkerLogo.jpg";
 
 
 const partners = [

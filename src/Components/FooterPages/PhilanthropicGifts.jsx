@@ -1,5 +1,5 @@
 import React from "react";
-import Neglect from "../../assets/neglect.jpg"; // Replace with your image path
+import Neglect from "../../assets/Neglect.jpg"; // Replace with your image path
 import { Link } from "react-router-dom"; 
 
 const PhilanthropicGifts = () => {

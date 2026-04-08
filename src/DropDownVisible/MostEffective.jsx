@@ -1,11 +1,11 @@
 // MostEffective.jsx
 import React from "react";
-import Gardens from "../assets/gardens.jpg";
-import SchoolFeeding from "../assets/schoolfeeding.jpg";
-import FarmingSupport from "../assets/farmingsupport.jpg";
-import WaterConservation from "../assets/waterconservation.jpg";
-import Workshop from "../assets/workshop.jpg";
-import FoodStorage from "../assets/foodstorage.jpg";
+import Gardens from "../assets/Gardens.jpg";
+import SchoolFeeding from "../assets/SchoolFeeding.jpg";
+import FarmingSupport from "../assets/FarmingSupport.jpg";
+import WaterConservation from "../assets/WaterConservation.jpg";
+import Workshop from "../assets/Workshop.jpg";
+import FoodStorage from "../assets/FoodStorage.jpg";
 import { Link } from "react-router-dom";
 
 // Sample data for Food Security projects in Gambia

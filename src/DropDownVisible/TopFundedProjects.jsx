@@ -1,11 +1,11 @@
 // TopFundedProjects.jsx
 import React from "react";
-import Photo10 from "../assets/photo10.jpg";
-import Photo5 from "../assets/photo5.jpg";
-import Care from "../assets/care.jpg";
-import Renovation from "../assets/renovation.jpg";
-import Lab from "../assets/lab.jpg"; 
-import Teachers from "../assets/teachers.jpg"; 
+import Photo10 from "../assets/Photo10.jpg";
+import Photo5 from "../assets/Photo5.jpg";
+import Care from "../assets/Care.jpg";
+import Renovation from "../assets/Renovation.jpg";
+import Lab from "../assets/Lab.jpg"; 
+import Teachers from "../assets/Teachers.jpg"; 
 import { Link } from "react-router-dom";
 
 // Sample data for education projects with image URLs
