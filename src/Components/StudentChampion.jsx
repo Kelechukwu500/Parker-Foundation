@@ -1,5 +1,8 @@
 import React from "react";
-import StudentChamp from "../assets/studentchamp.jpg"; // Replace with your actual image
+import StudentChamp from "../assets/studentchamp.jpg";
+import { Link } from "react-router-dom";
+
+
 
 const StudentChampion = () => {
   return (
@@ -70,9 +73,11 @@ const StudentChampion = () => {
 
             {/* Sponsor Button */}
             <div className="text-center mt-6">
+              <Link to="/donate">
               <button className="bg-[#002C5F] hover:bg-[#00418a] transition duration-300 text-white font-bold py-3 px-12 rounded-md text-lg shadow-md">
                 Sponsor
               </button>
+              </Link>
             </div>
           </div>
         </div>

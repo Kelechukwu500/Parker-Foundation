@@ -1,5 +1,8 @@
 import React from "react";
-import SafeHavenimg from "../assets/safehaven.jpg"; // import your image here
+import SafeHavenimg from "../assets/safehaven.jpg"; 
+import { Link } from "react-router-dom";
+
+
 
 const SafeHaven = () => {
   return (
@@ -87,9 +90,11 @@ const SafeHaven = () => {
 
             {/* Sponsor Button */}
             <div className="text-center mt-6">
-              <button className="bg-[#002C5F] hover:bg-[#00418a] transition duration-300 text-white font-bold py-3 px-12 rounded-md text-lg shadow-md">
-                Sponsor
-              </button>
+              <Link to="/donate">
+                <button className="bg-[#002C5F] hover:bg-[#00418a] transition duration-300 text-white font-bold py-3 px-12 rounded-md text-lg shadow-md">
+                  Sponsor
+                </button>
+              </Link>
             </div>
 
           </div>

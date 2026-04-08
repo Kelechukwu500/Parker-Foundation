@@ -413,6 +413,7 @@ const Navbar = () => {
 
               {/* Mobile Donate Accordion */}
               <div className="space-y-2">
+                
                 <button
                   onClick={() => setMobileDonateOpen((v) => !v)}
                   className="btn btn-primary !w-full !justify-between !min-h-[52px] !text-[14px]"
@@ -423,6 +424,10 @@ const Navbar = () => {
                     className={`transition-transform ${mobileDonateOpen ? "rotate-180" : ""}`}
                   />
                 </button>
+                
+
+                
+
 
                 {mobileDonateOpen && (
                   <div className="rounded-2xl border border-slate-200 p-4 space-y-4">

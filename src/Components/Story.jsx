@@ -875,9 +875,11 @@ const Story = () => {
 
         {/* DONATE NOW BUTTON */}
         <div className="text-center mt-12 mb-12 relative z-10">
-          <button className="px-8 py-4 bg-yellow-500 text-white font-bold rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300">
-            Donate Now
-          </button>
+          <Link to="/donate">
+            <button className="px-8 py-4 bg-yellow-500 text-white font-bold rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300">
+              Donate Now
+            </button>
+          </Link>
         </div>
       </div>
 

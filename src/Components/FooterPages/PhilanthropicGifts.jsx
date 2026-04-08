@@ -71,9 +71,11 @@ const PhilanthropicGifts = () => {
 
           {/* Donate Button */}
           <div className="mt-8">
+            <Link to="/donate">
             <button className="bg-yellow-500 text-white font-semibold px-8 py-4 rounded-lg shadow hover:bg-yellow-600 transition">
               Donate Now
             </button>
+            </Link>
           </div>
         </div>
 

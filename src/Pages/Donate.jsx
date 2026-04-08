@@ -1,174 +1,212 @@
 import React, { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { db } from "../Firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import emailjs from "emailjs-com";
+import Flutterwavelogo from "../assets/flutterwavelogo.jpg";
 
-const API_BASE_URL = window.APP_CONFIG?.API_BASE_URL || "";
+const Donate = () => {
+  const [amount, setAmount] = useState("");
+  const [currency, setCurrency] = useState("NGN");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [description, setDescription] = useState("");
 
-export default function Donate() {
-  const [searchParams] = useSearchParams();
+  const presetAmounts = {
+    NGN: [5000, 10000, 20000],
+    USD: [10, 50, 100],
+    GBP: [10, 40, 80],
+    EUR: [10, 50, 90],
+  };
 
-  const [form, setForm] = useState({
-    amount: searchParams.get("amount") || "",
-    fullName: "",
-    email: "",
-    phone: "",
-  });
+  const sendEmail = () => {
+    const templateParams = {
+      name,
+      email,
+      amount,
+      currency,
+      description, // <- added
+    };
 
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+    emailjs.send(
+      "YOUR_SERVICE_ID",
+      "YOUR_TEMPLATE_ID",
+      templateParams,
+      "YOUR_PUBLIC_KEY",
+    );
+  };
 
-  const source = searchParams.get("source") || "";
-  const campaign = searchParams.get("campaign") || "";
-  const label = searchParams.get("label") || "";
+  const saveDonation = async () => {
+    await addDoc(collection(db, "donations"), {
+      name,
+      email,
+      amount,
+      currency,
+      description, // <- added
+      createdAt: serverTimestamp(),
+    });
+  };
 
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setForm((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  }
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-    setError("");
-
-    const amountNumber = Number(form.amount);
-
-    if (!Number.isFinite(amountNumber) || amountNumber <= 0) {
-      setError("Enter a valid donation amount.");
+  const handlePayment = () => {
+    if (!amount || !name || !email) {
+      alert("Please fill all fields");
       return;
     }
 
-    if (!form.email.trim()) {
-      setError("Email is required.");
-      return;
-    }
+    window.FlutterwaveCheckout({
+      public_key: "FLWPUBK_TEST-xxxxxxxxxxxxx-X",
+      tx_ref: "donation-" + Date.now(),
+      amount: amount,
+      currency: currency,
+      payment_options: "card, banktransfer, ussd",
+      customer: {
+        email: email,
+        name: name,
+      },
+      customizations: {
+        title: "Charlie Parker's C. Global Foundation",
+        description: "Support our mission",
+        logo: "https://via.placeholder.com/150",
+      },
 
-    if (!API_BASE_URL) {
-      setError("Frontend is ready, but API_BASE_URL is not configured yet.");
-      return;
-    }
+      callback: async function (response) {
+        console.log(response);
 
-    try {
-      setLoading(true);
+        // ✅ Save to Firebase
+        await saveDonation();
 
-      const res = await fetch(`${API_BASE_URL}/donations/create-payment`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          amount: amountNumber,
-          fullName: form.fullName.trim(),
-          email: form.email.trim(),
-          phone: form.phone.trim(),
-          source,
-          campaign,
-          label,
-          successUrl: `${window.location.origin}/thank-you`,
-          cancelUrl: `${window.location.origin}/donate`,
-        }),
-      });
+        // ✅ Send Email Receipt
+        sendEmail();
 
-      const data = await res.json();
+        // ✅ Show success UI
+        setSuccess(true);
+      },
 
-      if (!res.ok || !data?.payment_link) {
-        throw new Error(data?.message || "Unable to start payment.");
-      }
-
-      window.location.assign(data.payment_link);
-    } catch (err) {
-      setError(err.message || "Something went wrong.");
-    } finally {
-      setLoading(false);
-    }
-  }
+      onclose: function () {
+        console.log("Payment closed");
+      },
+    });
+  };
 
   return (
-    <section className="min-h-screen px-4 py-12">
-      <div className="mx-auto max-w-2xl rounded-3xl bg-white p-8 shadow-xl">
-        <h1 className="mb-3 text-3xl font-bold text-gray-900">Make a Donation</h1>
-        <p className="mb-8 text-gray-600">
-          Enter any amount you would like to give.
-        </p>
+    <div className="min-h-screen bg-[linear-gradient(to_bottom,#f8fafc_0%,#ffffff_20%,#f8fafc_100%)] flex items-center justify-center px-3 sm:px-4 md:px-6 py-6 md:py-10">
+      <div className="bg-white rounded-2xl shadow-xl w-full max-w-md md:max-w-lg p-5 sm:p-6 md:p-8">
+        {success ? (
+          <div className="text-center py-10">
+            <div className="text-5xl mb-4">❤️</div>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
-          <div>
-            <label className="mb-2 block text-sm font-semibold text-gray-700">
-              Donation Amount
-            </label>
-            <input
-              type="number"
-              name="amount"
-              min="1"
-              step="0.01"
-              value={form.amount}
-              onChange={handleChange}
-              className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
-              placeholder="Enter amount"
-              required
-            />
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3">Thank You!</h2>
+
+            <p className="text-gray-600 text-sm sm:text-base mb-6">
+              Your payment has been received for processing.
+            </p>
+
+            <button
+              onClick={() => {
+                setSuccess(false);
+                setAmount("");
+                setName("");
+                setEmail("");
+              }}
+              className="bg-yellow-500 text-black px-6 py-2.5 rounded font-semibold hover:bg-yellow-400 transition"
+            >
+              Make Another Donation
+            </button>
           </div>
+        ) : (
+          <>
+            {/* FORM SAME AS BEFORE */}
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2">
+              Make a Donation ❤️
+            </h2>
 
-          <div>
-            <label className="mb-2 block text-sm font-semibold text-gray-700">
-              Full Name
-            </label>
             <input
               type="text"
-              name="fullName"
-              value={form.fullName}
-              onChange={handleChange}
-              className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
-              placeholder="Enter full name"
+              placeholder="Full Name"
+              className="w-full border p-3 rounded mb-4"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
-          </div>
 
-          <div>
-            <label className="mb-2 block text-sm font-semibold text-gray-700">
-              Email
-            </label>
             <input
               type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
-              placeholder="Enter email"
-              required
+              placeholder="Email Address"
+              className="w-full border p-3 rounded mb-4"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
-          </div>
 
-          <div>
-            <label className="mb-2 block text-sm font-semibold text-gray-700">
-              Phone Number
-            </label>
-            <input
-              type="tel"
-              name="phone"
-              value={form.phone}
-              onChange={handleChange}
-              className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
-              placeholder="Enter phone number"
-            />
-          </div>
+            <select
+              className="w-full border p-3 rounded mb-4"
+              value={currency}
+              onChange={(e) => {
+                setCurrency(e.target.value);
+                setAmount("");
+              }}
+            >
+              <option value="NGN">🇳🇬 Naira (₦)</option>
+              <option value="USD">🌍 US Dollar ($)</option>
+              <option value="GBP">🌍 Pound (£)</option>
+              <option value="EUR">🌍 Euro (€)</option>
+            </select>
 
-          {error && (
-            <div className="rounded-2xl bg-red-50 px-4 py-3 text-sm text-red-700">
-              {error}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
+              {presetAmounts[currency].map((amt) => (
+                <button
+                  key={amt}
+                  onClick={() => setAmount(amt)}
+                  className="border rounded p-2 hover:bg-yellow-400"
+                >
+                  {amt}
+                </button>
+              ))}
             </div>
-          )}
 
-          <button
-            type="submit"
-            disabled={loading}
-                      className="w-full disabled:opacity-60 btn-primary btn" 
-                
-          >
-            {loading ? "Starting payment..." : "Continue to Payment"}
-          </button>
-        </form>
+            <input
+              type="number"
+              placeholder="Enter custom amount"
+              className="w-full border p-3 rounded mb-6"
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+            />
+
+            {/* Description */}
+            <div className="mb-6">
+              <label className="block text-gray-700 text-sm font-medium mb-1">
+                Description
+              </label>
+              <input
+                type="text"
+                placeholder="Specify the project or purpose of your donation"
+                className="w-full border p-3 rounded"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+              />
+            </div>
+
+            <button
+              onClick={handlePayment}
+              className="w-full bg-yellow-500 text-black py-3 rounded font-bold"
+            >
+              Donate Now
+            </button>
+
+            {/* Footer */}
+            <div className="flex items-center justify-center gap-2 mt-4">
+              <p className="text-xs text-gray-500 text-center">
+                Secure payments powered by Flutterwave
+              </p>
+              <img
+                src={Flutterwavelogo}
+                alt="Flutterwave"
+                className="h-4 sm:h-5 object-contain"
+              />
+            </div>
+          </>
+        )}
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default Donate;

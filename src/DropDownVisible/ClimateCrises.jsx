@@ -6,6 +6,7 @@ import Agroforestory from "../assets/agroforestory.jpg";
 import FarmerTraining from "../assets/farmertraining.jpg";
 import SeedDistribution from "../assets/seeddistribution.jpg";
 import PoweredIrri from "../assets/poweredirri.jpg";
+import { Link } from "react-router-dom";
 
 // Sample data for Climate Action projects
 const projects = [
@@ -188,9 +189,11 @@ const ClimateCrises = () => {
 
                   {/* CTA Buttons */}
                   <div className="flex gap-3">
+                    <Link to= "/donate">
                     <button className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
                       Donate Now
                     </button>
+                    </Link>
                     
                   </div>
                 </div>

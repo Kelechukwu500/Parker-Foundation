@@ -6,6 +6,7 @@ import Maternal from "../assets/maternal.jpg";
 import HealthTrain from "../assets/healthtrain.jpg";
 import Emergency from "../assets/emergency.jpg";
 import Vaccination from "../assets/vaccination.jpg";
+import { Link } from "react-router-dom";
 
 // Sample data for Health Care projects in Kenya
 const projects = [
@@ -175,9 +176,11 @@ export default function ProjectsClosestGoal() {
 
                   {/* CTA Buttons */}
                   <div className="flex gap-3">
+                    <Link to="/donate">
                     <button className="flex-1 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition">
                       Donate Now
                     </button>
+                    </Link>
                     
                   </div>
                 </div>

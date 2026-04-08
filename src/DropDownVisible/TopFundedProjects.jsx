@@ -4,8 +4,9 @@ import Photo10 from "../assets/photo10.jpg";
 import Photo5 from "../assets/photo5.jpg";
 import Care from "../assets/care.jpg";
 import Renovation from "../assets/renovation.jpg";
-import Lab from "../assets/lab.jpg"; // New image 1
-import Teachers from "../assets/teachers.jpg"; // New image 2
+import Lab from "../assets/lab.jpg"; 
+import Teachers from "../assets/teachers.jpg"; 
+import { Link } from "react-router-dom";
 
 // Sample data for education projects with image URLs
 const projects = [
@@ -175,9 +176,11 @@ const TopFundedProjects = () => {
 
                   {/* CTA Buttons */}
                   <div className="flex gap-3">
+                    <Link to="/donate">
                     <button className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
                       Donate Now
                     </button>
+                    </Link>
                     
                   </div>
                 </div>

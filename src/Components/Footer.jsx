@@ -7,7 +7,7 @@ const footerColumns = [
   {
     title: "Donors",
     links: [
-      { label: "Ways to Give", to: "/ways-to-give" },
+      { label: "Ways to Give", to: "/donate" },
       { label: "Philanthropic Gifts", to: "/philanthropic-gifts" },
       { label: "Donate in Honor", to: "/donate-in-honor" },
     ],

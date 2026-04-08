@@ -71,7 +71,7 @@ const Newsletter = () => {
       });
 
       alert(
-        "Thank you for subscribing! Check your email for a welcome message."
+        "Thank you for subscribing! Check your email for a welcome message.",
       );
 
       setEmail("");
@@ -97,8 +97,9 @@ const Newsletter = () => {
               </h2>
 
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl">
-                Stay updated with the latest news, events, and exclusive insights from
-                Charlie Parker. Join our community and never miss a beat.
+                Stay updated with the latest news, events, and exclusive
+                insights from Charlie Parker. Join our community and never miss
+                a beat.
               </p>
             </div>
 
@@ -165,7 +166,11 @@ const Newsletter = () => {
                     }`}
                   >
                     <span className="flex items-center justify-between gap-4">
-                      <span className={preferences ? "text-gray-900" : "text-gray-400"}>
+                      <span
+                        className={
+                          preferences ? "text-gray-900" : "text-gray-400"
+                        }
+                      >
                         {selectedPreferenceLabel}
                       </span>
 

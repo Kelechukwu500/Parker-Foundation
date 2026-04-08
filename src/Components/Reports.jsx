@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FaBook, FaUtensils, FaFirstAid } from "react-icons/fa"; // icons added
+import { FaBook, FaUtensils, FaFirstAid } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // IMAGE IMPORTS
 import Photo10 from "../assets/Photo10.jpg";
@@ -186,12 +187,11 @@ const Report = () => {
 
       {/* DONATE NOW BUTTON */}
       <div className="flex justify-center mt-8">
-        <a
-          href="/donate"
-          className="bg-black-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300"
-        >
-          Donate Now
-        </a>
+        <Link to="/donate">
+          <button className="bg-black-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300">
+            Donate Now
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -74,6 +74,7 @@ import Crises3 from "../assets/crises3.jpg";
 import Crises14 from "../assets/crises14.jpg";
 import Crises15 from "../assets/crises15.jpg";
 import Crises16 from "../assets/crises16.jpg";
+import { Link } from "react-router-dom";
 
 const BrowseAllProjects = () => {
 
@@ -585,9 +586,11 @@ const BrowseAllProjects = () => {
 
         {/* Donate Now CTA Section */}
         <section className="py-16 bg-gray-200 flex items-center justify-center">
-          <button className="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition">
-            Donate Now
-          </button>
+          <Link to="/donate">
+            <button className="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition">
+              Donate Now
+            </button>
+          </Link>
         </section>
 
         {/* Auto-scrolling Carousel */}

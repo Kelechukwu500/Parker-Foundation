@@ -6,6 +6,7 @@ import Photo2 from "../assets/photo2.jpg";
 import MobileCamp from "../assets/mobilecamp.jpg";
 import Vaccination from "../assets/vaccination.jpg";
 import Photo25 from "../assets/photo25.jpg";
+import { Link } from "react-router-dom";
 
 // Sample data for Physical Health projects in Uganda
 const projects = [
@@ -187,9 +188,11 @@ const Wellness = () => {
 
                   {/* CTA Buttons */}
                   <div className="flex gap-3">
+                    <Link to="/donate">
                     <button className="flex-1 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition">
                       Donate Now
                     </button>
+                    </Link>
                     
                   </div>
                 </div>

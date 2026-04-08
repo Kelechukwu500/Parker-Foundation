@@ -6,6 +6,7 @@ import SafeSpace from "../assets/safespace.jpg";
 import WomenPower from "../assets/womenpower.jpg";
 import Hygiene from "../assets/hygiene.jpg";
 import Entrepreneur from "../assets/entrepreneur.jpg";
+import { Link } from "react-router-dom";
 
 // Sample data for newest Gender Equality projects
 const projects = [
@@ -175,9 +176,11 @@ export default function NewestProjects() {
 
                   {/* CTA Buttons */}
                   <div className="flex gap-3">
+                    <Link to="/donate">
                     <button className="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
                       Donate Now
                     </button>
+                    </Link>
                    
                   </div>
                 </div>

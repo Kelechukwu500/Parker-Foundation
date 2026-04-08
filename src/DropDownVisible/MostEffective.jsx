@@ -6,6 +6,7 @@ import FarmingSupport from "../assets/farmingsupport.jpg";
 import WaterConservation from "../assets/waterconservation.jpg";
 import Workshop from "../assets/workshop.jpg";
 import FoodStorage from "../assets/foodstorage.jpg";
+import { Link } from "react-router-dom";
 
 // Sample data for Food Security projects in Gambia
 const projects = [
@@ -184,9 +185,11 @@ const MostEffective = () => {
 
                   {/* CTA Buttons */}
                   <div className="flex gap-3">
+                    <Link to="/donate">
                     <button className="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
                       Donate Now
                     </button>
+                    </Link>
                   
                   </div>
                 </div>

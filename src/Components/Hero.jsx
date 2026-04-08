@@ -139,7 +139,7 @@ export default function Hero() {
               <p className="text-base sm:text-lg lg:text-xl mb-7 max-w-2xl mx-auto lg:mx-0 text-white/90 leading-relaxed">
                 Help 200+ children access essential school supplies. Your contribution creates lasting change.
               </p>
-              <Link to="/browse-all-projects">
+              <Link to="/donate">
                 <button className="btn btn-secondary">
                   DONATE NOW
                 </button>
@@ -575,7 +575,7 @@ export default function Hero() {
           <p className="text-gray-700 text-base leading-relaxed max-w-4xl mx-auto">
             "Safe Havens" are Charlie Parker C. Global Foundation&apos;s worldwide programs designed to strengthen families, provide protective care through residential homes and foster care, and advocate for justice. Your support plays a crucial role in the lives of vulnerable children, families, and communities.
           </p>
-          <Link to="/safe-haven">
+          <Link to="/donate">
             <button className="btn btn-primary mt-6">
               GIVE TO SAFE HAVEN
             </button>
@@ -595,9 +595,11 @@ export default function Hero() {
               <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                 Meet Isabella, a young girl at <strong>Charlie Parker C. Global Foundation</strong> Academy in Nigeria! Isabella joined our school at the age of 8, unable to read or write. Today, Isabella is progressing to her final primary grade with determination, bringing her closer to her dream of becoming a medical doctor.
               </p>
+              <Link to ="/donate">
               <button className="btn btn-primary mt-4">
                 GIVE NOW
               </button>
+              </Link>
             </div>
 
             <div className="w-full lg:w-1/3">
