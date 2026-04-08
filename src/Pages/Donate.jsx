@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { db } from "../Firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import emailjs from "emailjs-com";
-import FlutterwaveLogo from "../assets/FlutterwaveLogo.jpg";
+
 
 const Donate = () => {
   const [amount, setAmount] = useState("");
@@ -196,11 +196,7 @@ const Donate = () => {
               <p className="text-xs text-gray-500 text-center">
                 Secure payments powered by Flutterwave
               </p>
-              <img
-                src={FlutterwaveLogo}
-                alt="Flutterwave"
-                className="h-4 sm:h-5 object-contain"
-              />
+             
             </div>
           </>
         )}
