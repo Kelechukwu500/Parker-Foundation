@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { db } from "../Firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import emailjs from "emailjs-com";
-import FlutterwaveLogo from "../assets/flutterwavelogo.jpg";
+import FlutterwaveLogo from "../assets/flutterwaveLogo.jpg";
 
 const Donate = () => {
   const [amount, setAmount] = useState("");
