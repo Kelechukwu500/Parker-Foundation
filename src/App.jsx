@@ -71,7 +71,7 @@ import PlatinumTierPartnerForm from "./CorporateForm/PlatinumTierPartnerForm";
 //Success Stories PDFs//
 import JulietStoryPDF from "./Stories/JulietPDF";
 import EmpoweringCommunitiesPDF from "./Stories/EmpoweringCommunitiesPDF";
-import BreakingbarriersPDF from "./Stories/BreakingBarriersPDF";
+import BreakingBarriersPDF from "./Stories/BreakingBarriersPDF";
 
 
 //Dropdown Visible Pages//
