@@ -255,7 +255,7 @@ const Navbar = () => {
                 </button>
 
                 {donateOpen && (
-                  <div className="absolute right-0 top-full mt-3 w-[520px] rounded-[24px] border border-black/8 bg-white p-6">
+                  <div className="absolute right-0 top-full mt-3 w-[520px] max-w-[95vw] rounded-[24px] border border-black/8 bg-white p-6 overflow-y-auto">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div>
                         <p className="font-semibold text-[#1f3552] mb-3 text-sm uppercase tracking-[0.08em]">
