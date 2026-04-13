@@ -262,21 +262,7 @@ const Navbar = () => {
                         </div>
                       </div>
 
-                      <div>
-                        <p className="font-semibold text-[#1f3552] mb-3 text-sm uppercase tracking-[0.08em]">
-                          Top Locations
-                        </p>
-                        <div className="space-y-2">
-                          {topLocations.map((locationName) => (
-                            <div
-                              key={locationName}
-                              className="rounded-xl bg-slate-50 px-3 py-2 text-sm text-slate-600 cursor-default"
-                            >
-                              {locationName}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                     
 
                       <div>
                         <p className="font-semibold text-[#1f3552] mb-3 text-sm uppercase tracking-[0.08em]">
@@ -297,6 +283,15 @@ const Navbar = () => {
                         </div>
                       </div>
                     </div>
+
+
+                    
+
+
+
+
+
+
 
                     <div className="mt-5 pt-5 border-t border-slate-200">
                       <Link to="/browse-all-projects" onClick={() => setDonateOpen(false)}>

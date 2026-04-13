@@ -1,6 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { FaBook, FaUtensils, FaFirstAid } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -16,16 +14,6 @@ import Photo22 from "../assets/Photo22.jpg";
 import Photo23 from "../assets/Photo23.jpg";
 
 const Report = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-  };
-
   /*** CONTROL PANEL FOR SIZES ***/
   const cardPadding = "p-4";
   const cardGap = "gap-3";
@@ -37,21 +25,15 @@ const Report = () => {
   const imageShape = "rounded shadow";
 
   return (
-    <div
-      className={`p-4 min-h-screen bg-gray-300`}
-      
-    >
+    <div className={`p-4 min-h-screen bg-gray-300`}>
       <h1 className="text-3xl font-bold text-center mb-6 text-white">
         Charlie Parker C. Global Foundation Reports
       </h1>
 
-      <div ref={ref} className={`space-y-8 ${cardMaxWidth} mx-auto`}>
+      <div className={`space-y-8 ${cardMaxWidth} mx-auto`}>
         {/* CARD 1 */}
-        <motion.div
+        <div
           className={`${cardPadding} border border-gray-300 rounded-lg shadow-md bg-white bg-opacity-10`}
-          variants={cardVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
         >
           <div className="flex items-center mb-3">
             <FaBook className="text-yellow-500 mr-2 text-2xl" />
@@ -90,14 +72,11 @@ const Report = () => {
               className={`${imageWidth} ${imageHeight} object-cover ${imageShape}`}
             />
           </div>
-        </motion.div>
+        </div>
 
         {/* CARD 2 */}
-        <motion.div
+        <div
           className={`${cardPadding} border border-gray-300 rounded-lg shadow-md bg-white bg-opacity-10`}
-          variants={cardVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
         >
           <div className="flex items-center mb-3">
             <FaUtensils className="text-red-500 mr-2 text-2xl" />
@@ -136,14 +115,11 @@ const Report = () => {
               className={`${imageWidth} ${imageHeight} object-cover ${imageShape}`}
             />
           </div>
-        </motion.div>
+        </div>
 
         {/* CARD 3 */}
-        <motion.div
+        <div
           className={`${cardPadding} border border-gray-300 rounded-lg shadow-md bg-white bg-opacity-10`}
-          variants={cardVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
         >
           <div className="flex items-center mb-3">
             <FaFirstAid className="text-green-500 mr-2 text-2xl" />
@@ -182,7 +158,7 @@ const Report = () => {
               className={`${imageWidth} ${imageHeight} object-cover ${imageShape}`}
             />
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* DONATE NOW BUTTON */}

@@ -452,7 +452,7 @@ const Story = () => {
               <div className="flex items-center gap-4 mb-6">
                 <FaBrain className="text-4xl text-green-500" />
                 <h3 className="text-3xl font-extrabold tracking-wide">
-                  UNDERSTANDING
+                  Empathy
                 </h3>
               </div>
               <p className="text-lg leading-relaxed">
@@ -486,7 +486,7 @@ const Story = () => {
               <div className="flex items-center gap-4 mb-6">
                 <FaMountain className="text-4xl text-blue-600" />
                 <h3 className="text-3xl font-extrabold tracking-wide">
-                  PERSEVERANCE
+                  Tenacity
                 </h3>
               </div>
               <p className="text-lg leading-relaxed">
@@ -733,7 +733,7 @@ const Story = () => {
               <h3 className="text-orange-500 italic text-3xl font-semibold mb-2">
                 Financial Stewardship
               </h3>
-              <h1 className="text-5xl font-extrabold leading-tight text-black mb-6">
+              <h1 className="text-4xl font-extrabold leading-tight text-black mb-6">
                 DEDICATED TO RESPONSIBLE <br /> STEWARDSHIP OF <br />
                 <span className="bg-yellow-300 px-2">RESOURCES</span>
               </h1>
@@ -786,7 +786,7 @@ const Story = () => {
               <h3 className="text-purple-700 italic text-3xl font-semibold mb-2">
                 Safeguarding Policy
               </h3>
-              <h1 className="text-5xl font-extrabold leading-tight text-black mb-6">
+              <h1 className="text-4xl font-extrabold leading-tight text-black mb-6">
                 COMMITMENT TO SAFETY, <br />
                 RESPECT, <br />
                 <span className="bg-yellow-300 px-2">&amp; DIGNITY</span>
