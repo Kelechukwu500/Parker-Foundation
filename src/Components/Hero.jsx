@@ -4,8 +4,8 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Photo18 from "../assets/Photo18.jpg";
 import Crises3 from "../assets/Crises3.jpg";
-import NonProfit2 from "../assets/NonProfit2.jpg";
-import NonProfit from "../assets/NonProfit.jpg";
+import Nonprofit2 from "../assets/Nonprofit2.jpg";
+import Nonprofit from "../assets/Nonprofit.jpg";
 import Unify from "../assets/Unify.jpg";
 import Haven from "../assets/Haven.jpg";
 import Isabela from "../assets/Isabela.jpg";
@@ -384,7 +384,7 @@ export default function Hero() {
             <div className="w-full md:w-1/2 flex justify-center order-2 md:order-1">
               <div className="group w-full max-w-xl overflow-hidden rounded-[24px] shadow-[0_16px_36px_rgba(15,23,42,0.12)]">
                 <img
-                  src={NonProfit2}
+                  src={Nonprofit2}
                   alt="Nonprofits Support"
                   className="rounded-[24px] w-full max-w-lg md:max-w-none h-[18rem] sm:h-[22rem] lg:h-[28rem] object-cover transition duration-500 group-hover:scale-[1.03]"
                 />
@@ -453,7 +453,7 @@ export default function Hero() {
             <div className="w-full md:w-1/2 flex justify-center">
               <div className="group w-full max-w-lg overflow-hidden rounded-[24px] shadow-[0_16px_36px_rgba(15,23,42,0.12)]">
                 <img
-                  src={NonProfit}
+                  src={Nonprofit}
                   alt="Volunteer"
                   className="w-full h-[18rem] sm:h-[22rem] lg:h-[26rem] object-cover rounded-[24px] transition duration-500 group-hover:scale-[1.03]"
                 />
