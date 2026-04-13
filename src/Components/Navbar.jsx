@@ -221,12 +221,18 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about-us" className="hover:text-[#1f3552] transition">
+                <Link
+                  to="/about-us"
+                  className="hover:text-[#1f3552] transition"
+                >
                   Who We Are
                 </Link>
               </li>
               <li>
-                <Link to="/what-we-do" className="hover:text-[#1f3552] transition">
+                <Link
+                  to="/what-we-do"
+                  className="hover:text-[#1f3552] transition"
+                >
                   What We Do
                 </Link>
               </li>
@@ -244,7 +250,7 @@ const Navbar = () => {
                 </button>
 
                 {donateOpen && (
-                  <div className="absolute right-0 top-full mt-3 w-[680px] rounded-[24px] border border-black/8 bg-white p-6">
+                  <div className="absolute right-0 top-full mt-3 w-[520px] rounded-[24px] border border-black/8 bg-white p-6">
                     <div className="grid grid-cols-3 gap-6">
                       <div>
                         <p className="font-semibold text-[#1f3552] mb-3 text-sm uppercase tracking-[0.08em]">
@@ -261,8 +267,6 @@ const Navbar = () => {
                           ))}
                         </div>
                       </div>
-
-                     
 
                       <div>
                         <p className="font-semibold text-[#1f3552] mb-3 text-sm uppercase tracking-[0.08em]">
@@ -284,17 +288,11 @@ const Navbar = () => {
                       </div>
                     </div>
 
-
-                    
-
-
-
-
-
-
-
                     <div className="mt-5 pt-5 border-t border-slate-200">
-                      <Link to="/browse-all-projects" onClick={() => setDonateOpen(false)}>
+                      <Link
+                        to="/browse-all-projects"
+                        onClick={() => setDonateOpen(false)}
+                      >
                         <button className="btn btn-primary !w-full">
                           BROWSE ALL PROJECTS
                         </button>
@@ -374,7 +372,10 @@ const Navbar = () => {
                   onChange={handleSearch}
                   className="w-full min-h-[52px] pl-11 pr-4 border border-slate-200 rounded-2xl text-base text-black focus:outline-none focus:border-[#1f3552]/30 focus:ring-4 focus:ring-[#1f3552]/10"
                 />
-                <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={15} />
+                <FaSearch
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+                  size={15}
+                />
                 {suggestions.length > 0 && (
                   <ul className="absolute z-50 bg-white w-full mt-2 rounded-2xl border border-slate-200 p-2">
                     {suggestions.map((s, i) => (
@@ -408,7 +409,6 @@ const Navbar = () => {
 
               {/* Mobile Donate Accordion */}
               <div className="space-y-2">
-                
                 <button
                   onClick={() => setMobileDonateOpen((v) => !v)}
                   className="btn btn-primary !w-full !justify-between !min-h-[52px] !text-[14px]"
@@ -419,10 +419,6 @@ const Navbar = () => {
                     className={`transition-transform ${mobileDonateOpen ? "rotate-180" : ""}`}
                   />
                 </button>
-                
-
-                
-
 
                 {mobileDonateOpen && (
                   <div className="rounded-2xl border border-slate-200 p-4 space-y-4">
