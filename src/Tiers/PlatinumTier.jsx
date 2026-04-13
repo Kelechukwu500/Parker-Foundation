@@ -31,7 +31,7 @@ const PlatinumTier = () => {
       {/* Call-to-Action */}
       <a
         href="/platinum-tier-partner-form"
-        className="px-8 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition"
+        className="px-8 py-3 bg-yellow-400 text-white rounded-lg hover:bg-yellow-600 transition"
       >
         Become a Platinum Tier Partner
       </a>
