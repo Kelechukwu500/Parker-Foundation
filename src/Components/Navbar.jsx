@@ -32,6 +32,14 @@ const topThemes = [
   "Physical Health",
 ];
 
+const topLocations = [
+  "Nigeria",
+  "Africa",
+  "United Kingdom",
+  "United States",
+  "Global",
+];
+
 
 
 const projectLinks = [
