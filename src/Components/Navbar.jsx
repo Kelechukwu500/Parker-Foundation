@@ -32,14 +32,7 @@ const topThemes = [
   "Physical Health",
 ];
 
-const topLocations = [
-  "Nigeria",
-  "Kenya",
-  "Uganda",
-  "Gambia",
-  "Tanzania",
-  "Ghana",
-];
+
 
 const projectLinks = [
   { label: "Top Funded", path: "/top-funded-projects" },
@@ -266,22 +259,6 @@ const Navbar = () => {
                     <div className="grid grid-cols-3 gap-6">
                       <div>
                         <p className="font-semibold text-[#1f3552] mb-3 text-sm uppercase tracking-[0.08em]">
-                          Top Themes
-                        </p>
-                        <div className="space-y-2">
-                          {topThemes.map((theme) => (
-                            <div
-                              key={theme}
-                              className="rounded-xl bg-slate-50 px-3 py-2 text-sm text-slate-600 cursor-default"
-                            >
-                              {theme}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div>
-                        <p className="font-semibold text-[#1f3552] mb-3 text-sm uppercase tracking-[0.08em]">
                           Projects
                         </p>
                         <div className="space-y-1.5">
@@ -297,6 +274,20 @@ const Navbar = () => {
                             </Link>
                           ))}
                         </div>
+                      </div>
+
+                      <p className="font-semibold text-[#1f3552] mb-3 text-sm uppercase tracking-[0.08em]">
+                        Top Themes
+                      </p>
+                      <div className="space-y-2">
+                        {topThemes.map((theme) => (
+                          <div
+                            key={theme}
+                            className="rounded-xl bg-slate-50 px-3 py-2 text-sm text-slate-600 cursor-default"
+                          >
+                            {theme}
+                          </div>
+                        ))}
                       </div>
                     </div>
 
