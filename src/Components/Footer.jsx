@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Logo1 from "../assets/Logo1.jpg";
+import Channels from "../assets/Channels.jpg";
+import Arise from "../assets/Arise.jpg";
+import Sterling from "../assets/Sterling.jpg";
+import UBA from "../assets/UBA.jpg";
 
 const footerColumns = [
   {
@@ -61,20 +65,20 @@ const socialLinks = [
 
 const mediaLogos = [
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/The_Washington_Post_logo.svg/512px-The_Washington_Post_logo.svg.png",
-    alt: "Washington Post",
+    src: Channels,
+    alt: "Channels ",
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/CNN_International_logo.svg/512px-CNN_International_logo.svg.png",
-    alt: "CNN",
+    src: Arise,
+    alt: "Arise ",
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/NPR_News_logo.svg/512px-NPR_News_logo.svg.png",
-    alt: "NPR",
+    src: Sterling,
+    alt: "Sterling Bank",
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/New_York_Times_logo_variation.jpg/512px-New_York_Times_logo_variation.jpg",
-    alt: "NY Times",
+    src: UBA,
+    alt: "UBA",
   },
 ];
 
