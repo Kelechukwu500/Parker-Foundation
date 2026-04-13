@@ -1,5 +1,11 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
-import { FaBars, FaTimes, FaSearch, FaChevronDown, FaArrowRight } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaSearch,
+  FaChevronDown,
+  FaArrowRight,
+} from "react-icons/fa";
 import Fuse from "fuse.js";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -94,7 +100,9 @@ const Navbar = () => {
   const lastScrollY = useRef(0);
 
   const currentLanguage = useMemo(() => {
-    return (i18n.resolvedLanguage || i18n.language || "en").slice(0, 2).toUpperCase();
+    return (i18n.resolvedLanguage || i18n.language || "en")
+      .slice(0, 2)
+      .toUpperCase();
   }, [i18n.language, i18n.resolvedLanguage]);
 
   useEffect(() => {
@@ -129,7 +137,11 @@ const Navbar = () => {
   }, [i18n]);
 
   useEffect(() => {
-    const activeLanguage = (i18n.resolvedLanguage || i18n.language || "en").slice(0, 2);
+    const activeLanguage = (
+      i18n.resolvedLanguage ||
+      i18n.language ||
+      "en"
+    ).slice(0, 2);
     document.documentElement.lang = activeLanguage;
     document.documentElement.dir = activeLanguage === "ar" ? "rtl" : "ltr";
     localStorage.setItem("siteLanguage", activeLanguage);
