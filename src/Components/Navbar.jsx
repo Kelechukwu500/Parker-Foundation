@@ -445,7 +445,7 @@ const Navbar = () => {
                             onClick={closeMobile}
                             className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-[#1f3552] hover:bg-slate-50 transition"
                           >
-                            <span>{project.title}</span>
+                            <span>{project.label}</span>
                             <FaArrowRight size={12} />
                           </Link>
                         ))}
