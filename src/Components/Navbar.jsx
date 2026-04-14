@@ -433,7 +433,7 @@ const Navbar = () => {
 
                 {mobileDonateOpen && (
                   <div className="rounded-2xl border border-slate-200 p-4 space-y-4 text-[#000000]">
-                                        <div>
+                    <div>
                       <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#000000] mb-2">
                         Projects
                       </p>
@@ -445,12 +445,12 @@ const Navbar = () => {
                             onClick={closeMobile}
                             className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-[#000000] hover:bg-slate-50 transition"
                           >
-                            </Link>
+                            <span>{project.name}</span>
+                            <FaArrowRight size={12} />
+                          </Link>
                         ))}
-                          
-                          
 
-                           <Link
+                        <Link
                           to="/browse-all-projects"
                           onClick={closeMobile}
                           className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-[#000000] hover:bg-slate-50 transition"
@@ -459,16 +459,7 @@ const Navbar = () => {
                           <FaArrowRight size={12} />
                         </Link>
                       </div>
-                    
-                  
-                
-              </div>
-
-                        
-                      
-
-
-
+                    </div>
 
                     <div>
                       <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#1f3552] mb-2">
@@ -486,7 +477,6 @@ const Navbar = () => {
                       </div>
                     </div>
 
-                    
                     <div>
                       <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#1f3552] mb-2">
                         Top Themes
@@ -502,15 +492,7 @@ const Navbar = () => {
                         ))}
                       </div>
                     </div>
-
-                    
-
-                    
-
-                       
-                      </div>
-                    
-                  
+                  </div>
                 )}
               </div>
 
