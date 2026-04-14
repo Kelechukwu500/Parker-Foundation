@@ -374,34 +374,7 @@ const Navbar = () => {
           {/* Mobile Drawer */}
           {mobileOpen && (
             <div className="lg:hidden border-t border-black/5 bg-white px-4 py-4 space-y-4 rounded-b-[24px]">
-              {/* Mobile Search */}
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search pages…"
-                  value={query}
-                  onChange={handleSearch}
-                  className="w-full min-h-[52px] pl-11 pr-4 border border-slate-200 rounded-2xl text-base text-black focus:outline-none focus:border-[#1f3552]/30 focus:ring-4 focus:ring-[#1f3552]/10"
-                />
-                <FaSearch
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                  size={15}
-                />
-                {suggestions.length > 0 && (
-                  <ul className="absolute z-50 bg-white w-full mt-2 rounded-2xl border border-slate-200 p-2">
-                    {suggestions.map((s, i) => (
-                      <li key={i}>
-                        <button
-                          onClick={() => handleSuggestionClick(s)}
-                          className="w-full px-3 py-2.5 rounded-xl text-left text-sm text-gray-800 hover:bg-slate-50"
-                        >
-                          {s.label}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
+              
 
               {/* Mobile Nav Links */}
               <ul className="space-y-1">
