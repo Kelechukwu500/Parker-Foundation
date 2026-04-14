@@ -432,7 +432,7 @@ const Navbar = () => {
                 </button>
 
                 {mobileDonateOpen && (
-                  <div className="rounded-2xl border border-slate-200 p-4 space-y-4">
+                  <div className="rounded-2xl border border-slate-200 p-4 space-y-4 text-[#000000]">
                                         <div>
                       <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#000000] mb-2">
                         Projects
