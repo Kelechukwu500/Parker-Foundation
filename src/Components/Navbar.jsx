@@ -55,10 +55,9 @@ const mobileNavLinks = [
   { label: "Home", path: "/" },
   { label: "Who We Are", path: "/about-us" },
   { label: "What We Do", path: "/what-we-do" },
-  { label: "Blog", path: "/blog" },
   { label: "Contact", path: "/contact" },
   { label: "Volunteer", path: "/volunteer" },
-  { label: "Gallery", path: "/gallery" },
+  
 ];
 
 const LANGUAGES = [
