@@ -507,14 +507,7 @@ const Navbar = () => {
 
                     
 
-                        <Link
-                          to="/browse-all-projects"
-                          onClick={closeMobile}
-                          className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-[#1f3552] hover:bg-slate-50 transition"
-                        >
-                          <span>Browse All Projects</span>
-                          <FaArrowRight size={12} />
-                        </Link>
+                       
                       </div>
                     
                   
