@@ -432,9 +432,9 @@ const Navbar = () => {
                 </button>
 
                 {mobileDonateOpen && (
-                  <div className="rounded-2xl border border-slate-200 p-4 space-y-4 text-[#000000]">
+                  <div className="rounded-2xl border border-slate-200 p-4 space-y-4">
                     <div>
-                      <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#000000] mb-2">
+                      <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#1f3552] mb-2">
                         Projects
                       </p>
                       <div className="space-y-1">
@@ -443,7 +443,7 @@ const Navbar = () => {
                             key={project.path}
                             to={project.path}
                             onClick={closeMobile}
-                            className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-[#000000] hover:bg-slate-50 transition"
+                            className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-[#1f3552] hover:bg-slate-50 transition"
                           >
                             <span>{project.name}</span>
                             <FaArrowRight size={12} />
@@ -453,7 +453,7 @@ const Navbar = () => {
                         <Link
                           to="/browse-all-projects"
                           onClick={closeMobile}
-                          className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-[#000000] hover:bg-slate-50 transition"
+                          className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-[#1f3552] hover:bg-slate-50 transition"
                         >
                           <span>Browse All Projects</span>
                           <FaArrowRight size={12} />
