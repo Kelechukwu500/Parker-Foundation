@@ -35,8 +35,8 @@ const topThemes = [
 const topLocations = [
   "Nigeria",
   "Africa",
-  "United Kingdom",
-  "United States",
+  "Kenya",
+  "Ghana",
   "Global",
 ];
 
@@ -433,21 +433,28 @@ const Navbar = () => {
 
                 {mobileDonateOpen && (
                   <div className="rounded-2xl border border-slate-200 p-4 space-y-4">
-                    <div>
+                                        <div>
                       <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#1f3552] mb-2">
-                        Top Themes
+                        Projects
                       </p>
-                      <div className="flex flex-wrap gap-2">
-                        {topThemes.map((theme) => (
-                          <span
-                            key={theme}
-                            className="rounded-full bg-slate-50 px-3 py-1.5 text-sm text-slate-600"
+                      <div className="space-y-1">
+                        {projectLinks.map((project) => (
+                          <Link
+                            key={project.path}
+                            to={project.path}
+                            onClick={closeMobile}
+                            className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-[#1f3552] hover:bg-slate-50 transition"
                           >
-                            {theme}
-                          </span>
+                            </Link>
                         ))}
-                      </div>
-                    </div>
+                          </div>
+                          </div>
+
+                        
+                      
+
+
+
 
                     <div>
                       <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#1f3552] mb-2">
@@ -465,22 +472,26 @@ const Navbar = () => {
                       </div>
                     </div>
 
+                    
                     <div>
                       <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#1f3552] mb-2">
-                        Projects
+                        Top Themes
                       </p>
-                      <div className="space-y-1">
-                        {projectLinks.map((project) => (
-                          <Link
-                            key={project.path}
-                            to={project.path}
-                            onClick={closeMobile}
-                            className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-[#1f3552] hover:bg-slate-50 transition"
+                      <div className="flex flex-wrap gap-2">
+                        {topThemes.map((theme) => (
+                          <span
+                            key={theme}
+                            className="rounded-full bg-slate-50 px-3 py-1.5 text-sm text-slate-600"
                           >
-                            <span>{project.label}</span>
-                            <FaArrowRight size={12} />
-                          </Link>
+                            {theme}
+                          </span>
                         ))}
+                      </div>
+                    </div>
+
+                    
+
+                    
 
                         <Link
                           to="/browse-all-projects"
@@ -491,8 +502,8 @@ const Navbar = () => {
                           <FaArrowRight size={12} />
                         </Link>
                       </div>
-                    </div>
-                  </div>
+                    
+                  
                 )}
               </div>
 
