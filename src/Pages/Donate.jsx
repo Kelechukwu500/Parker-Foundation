@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { db } from "../Firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import emailjs from "emailjs-com";
-import FlutterwaveLogo from "../assets/FlutterwaveLogo.jpg";
+import flutterwave from "../assets/flutterwave.jpg";
 
 
 const Donate = () => {
@@ -195,7 +195,7 @@ const Donate = () => {
             {/* Footer */}
             <div className="flex items-center justify-center gap-2 mt-4">
               <img
-                src={FlutterwaveLogo}
+                src={flutterwave}
                 alt="Flutterwave Logo"
                 className="w-5 h-5 object-contain"
               />
