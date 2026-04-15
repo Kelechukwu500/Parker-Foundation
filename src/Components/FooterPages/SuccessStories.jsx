@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 
 // Import your images
 import John from "../../assets/John.jpg";
-import Isabela from "../../assets/Isabela.jpg";
-import Unify from "../../assets/Unify.jpg";
+import Isabela1 from "../../assets/Isabela1.jpg";
+import Daniel from "../../assets/Daniel.jpg";
+import { Link } from "react-router";
 
 const stories = [
   {
@@ -29,7 +30,7 @@ From a place of fear and loneliness, John now lives with hope, structure, and th
     id: 2,
     name: "Isabela",
     age: 8,
-    image: Isabela,
+    image: Isabela1,
     title: "A Journey from Illiteracy to Purpose",
     story: `Meet Isabela, a determined young girl whose life has been transformed through education and care at Charlie Parker C. Global Foundation Academy in Nigeria.
 
@@ -49,7 +50,7 @@ Isabela’s journey is a powerful testament to what opportunity, care, and educa
     id: 3,
     name: "Daniel",
     age: 10,
-    image: Unify,
+    image: Daniel,
     title: "Breaking Barriers Through Opportunity",
     story: `Daniel grew up in a low-income community where access to basic necessities and quality education was extremely limited. His parents struggled to provide for the family, and as a result, Daniel’s chances of attending school regularly were uncertain.
 
@@ -92,7 +93,7 @@ const SuccessStories = () => {
             className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-transform duration-300 flex flex-col"
           >
             {/* Image */}
-            <div className="h-56 overflow-hidden">
+            <div className="h-85 overflow-hidden">
               <img
                 src={story.image}
                 alt={story.name}
@@ -136,9 +137,12 @@ const SuccessStories = () => {
           Your support enables us to reach more children, provide education, and
           transform lives. Be part of something meaningful today.
         </p>
-        <button className="bg-black text-yellow-400 px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 hover:text-black transition duration-300">
-          Donate Now
-        </button>
+
+        <Link to="/donate">
+          <button className="bg-black text-yellow-400 px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 hover:text-black transition duration-300">
+            Donate Now
+          </button>
+        </Link>
       </div>
     </section>
   );

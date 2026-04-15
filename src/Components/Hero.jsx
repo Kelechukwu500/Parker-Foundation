@@ -12,6 +12,8 @@ import Isabela from "../assets/Isabela.jpg";
 import Champions00 from "../assets/Champions00.jpg";
 import Newsletter from "../Components/Newsletter";
 import Photo34 from "../assets/Photo34.jpg";
+import John from "../assets/John.jpg";
+import Isabella1 from "../assets/Isabela1.jpg";
 
 import Photo1 from "../assets/Photo1.jpg";
 import Photo2 from "../assets/Photo2.jpg";
@@ -523,7 +525,7 @@ export default function Hero() {
             <div className="w-full lg:w-1/3">
               <div className="group overflow-hidden rounded-[24px] shadow-[0_16px_36px_rgba(15,23,42,0.12)]">
                 <img
-                  src={Unify}
+                  src={John}
                   alt="Reunification Story"
                   className="w-full h-64 sm:h-80 lg:h-[32rem] object-cover rounded-[24px] transition duration-500 group-hover:scale-[1.03]"
                 />
@@ -538,9 +540,9 @@ export default function Hero() {
                 Bringing families back together in love and hope
               </h2>
               <p className="text-base sm:text-lg leading-relaxed text-gray-800">
-                Jimoh, an 8-year-old boy, had been separated from his family for several months. During his time with{" "}
+                John, an 8-year-old boy, had been separated from his family for several months. During his time with{" "}
                 <strong>Charlie Parker C. Global Foundation</strong>, he received nurturing care, guidance, and support. After several months, he was joyfully reunited with his family and enrolled in a local school, beginning a new chapter filled with hope and stability.{" "}
-                <span className="font-semibold text-yellow-600">You can be a part of more transformative stories like Jimoh&apos;s.</span>
+                <span className="font-semibold text-yellow-600">You can be a part of more transformative stories like John&apos;s.</span>
               </p>
             </div>
           </div>
@@ -605,7 +607,7 @@ export default function Hero() {
             <div className="w-full lg:w-1/3">
               <div className="group overflow-hidden rounded-[24px] shadow-[0_16px_36px_rgba(15,23,42,0.12)]">
                 <img
-                  src={Isabela}
+                  src={Isabella1}
                   alt="Isabella's Story"
                   className="w-full h-64 sm:h-80 lg:h-[28rem] object-cover rounded-[24px] transition duration-500 group-hover:scale-[1.03]"
                 />

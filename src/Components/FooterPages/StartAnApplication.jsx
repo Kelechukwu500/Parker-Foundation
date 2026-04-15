@@ -66,7 +66,7 @@ const StartAnApplication = () => {
 
   return (
     <section className="py-10 sm:py-14 lg:py-16 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-20 flex flex-col lg:flex-row gap-10 lg:gap-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-20 flex flex-col lg:flex-row gap-10 md:gap-12 lg:gap-12">
         {/* LEFT SIDE */}
         <div className="w-full lg:w-2/3 flex flex-col gap-6">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600">
@@ -85,7 +85,7 @@ const StartAnApplication = () => {
           </p>
 
           {/* STEPS */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 sm:gap-6 mt-4">
             <div className="bg-white p-5 sm:p-6 rounded-lg shadow">
               <h3 className="font-semibold text-purple-500 mb-2">
                 1. Fill Application
@@ -200,11 +200,11 @@ const StartAnApplication = () => {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="w-full lg:w-1/3">
+        <div className="w-full lg:w-1/3 mt-6 lg:mt-0">
           <img
             src={Application}
             alt="Application"
-            className="w-full h-[250px] sm:h-[350px] lg:h-full object-cover rounded-lg shadow-lg"
+            className="w-full h-[220px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover rounded-lg shadow-lg"
           />
         </div>
       </div>

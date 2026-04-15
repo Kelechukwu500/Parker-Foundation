@@ -9,7 +9,7 @@ import {
 import Fuse from "fuse.js";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Logo1 from "../assets/Logo1.jpg";
+import Logo3 from "../assets/Logo3.jpg";
 
 const pageList = [
   { label: "Home", path: "/" },
@@ -216,7 +216,7 @@ const Navbar = () => {
               onClick={closeMobile}
             >
               <img
-                src={Logo1}
+                src={Logo3}
                 alt="Charlie Parker C. Global Foundation"
                 className="h-12 w-12 object-contain flex-shrink-0"
               />

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import Logo1 from "../assets/Logo1.jpg";
+import Logo3 from "../assets/Logo3.jpg";
 import Channels from "../assets/Channels.jpg";
 import Arise from "../assets/Arise.jpg";
 import Sterling from "../assets/Sterling.jpg";
@@ -91,7 +91,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-4 min-w-0">
               <img
-                src={Logo1}
+                src={Logo3}
                 alt="Charlie Parker C. Global Foundation Logo"
                 className="w-12 h-12 object-contain shrink-0"
               />
@@ -186,10 +186,10 @@ const Footer = () => {
         <div className="pt-6 flex flex-col xl:flex-row xl:items-start xl:justify-between gap-5">
           <div className="space-y-1.5 max-w-2xl text-sm sm:text-base text-white/76 leading-relaxed">
             <p>
-              &copy; 2001–2025 Charlie Parker C. Global Foundation.{" "}
+              &copy; 2001–2026 Charlie Parker C. Global Foundation.{" "}
               <strong className="text-white">Built by Kaycee Tech</strong>.
             </p>
-            <p>Registered in Nigeria #159089</p>
+            <p>Registered in Nigeria RC159089</p>
             <p>
               Plot 208, Zachariah Maimalari Way, Gateway Plaza, CBD, Abuja, Nigeria.
               UK office: 38 Richmond Road, Cardiff, United Kingdom.{" "}
