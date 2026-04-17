@@ -59,7 +59,7 @@ const Donate = () => {
       tx_ref: "donation-" + Date.now(),
       amount: amount,
       currency: currency,
-      payment_options: "card, banktransfer, ussd",
+      payment_options: "card,banktransfer,ussd",
       customer: {
         email: email,
         name: name,
