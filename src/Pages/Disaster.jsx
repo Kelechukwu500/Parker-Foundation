@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import {
   FaCalendarAlt,
@@ -14,7 +12,6 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import FAQ from "../Components/FAQ.jsx";
 
 import Photo30 from "../assets/Photo30.jpg";
-
 
 //Carousel Photo Import//
 import Photo1 from "../assets/Photo1.jpg";
@@ -29,9 +26,9 @@ import Photo9 from "../assets/Photo9.jpg";
 import Photo10 from "../assets/Photo10.jpg";
 
 const Disaster = () => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [carouselIndex, setCarouselIndex] = useState(0);
+
   const images = [
     Photo1,
     Photo2,
@@ -44,7 +41,6 @@ const Disaster = () => {
     Photo9,
     Photo10,
   ];
-
 
   const navLinks = [
     { text: "Our Approach", path: "/our-approach" },
@@ -97,7 +93,6 @@ const Disaster = () => {
     >
       {/* Hero Section */}
       <div className="grid md:grid-cols-2 w-full">
-        {/* Left Card */}
         <div className="bg-[#A73C2C] text-white flex flex-col justify-center p-10">
           <h2 className="uppercase font-bold text-sm tracking-wide">
             Disaster Response
@@ -113,7 +108,6 @@ const Disaster = () => {
           </p>
         </div>
 
-        {/* Right Image */}
         <div className="relative">
           <img
             src={Photo30}
@@ -123,7 +117,7 @@ const Disaster = () => {
         </div>
       </div>
 
-      {/* Clickable Navigation Section */}
+      {/* Navigation */}
       <div className="flex flex-wrap justify-center bg-[#A73C2C] text-white py-3">
         {navLinks.map((link, idx) => (
           <Link
@@ -136,7 +130,7 @@ const Disaster = () => {
         ))}
       </div>
 
-      {/* Help Communities Recover */}
+      {/* Help Section */}
       <div className="text-center py-10 px-6">
         <h2 className="text-3xl font-bold mb-4">Help Communities Recover</h2>
         <p className="max-w-3xl mx-auto text-gray-700">
@@ -147,31 +141,24 @@ const Disaster = () => {
         </p>
       </div>
 
-      {/* Disaster Photo Carousel Section */}
+      {/* Carousel */}
       <div className="max-w-6xl mx-auto py-12 px-6">
         <h2 className="text-3xl font-bold mb-4 text-center">
           Disaster Response in Action
         </h2>
-        <p className="text-center max-w-2xl mx-auto mb-8 text-gray-700">
-          These photos showcase disaster locations, rescue operations, and
-          relief distribution by our teams. Every image tells the story of
-          resilience and support in action.
-        </p>
 
         <div className="relative flex items-center">
-          {/* Left Arrow */}
           <button
             onClick={() =>
               setCarouselIndex((prev) =>
-                prev === 0 ? images.length - 1 : prev - 1
+                prev === 0 ? images.length - 1 : prev - 1,
               )
             }
-            className="absolute left-0 z-10 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition"
+            className="absolute left-0 z-10 bg-black bg-opacity-50 text-white p-2 rounded-full"
           >
             <FaChevronLeft />
           </button>
 
-          {/* Carousel Images */}
           <div className="flex overflow-hidden w-full">
             {images.slice(carouselIndex, carouselIndex + 3).map((img, idx) => (
               <img
@@ -183,45 +170,31 @@ const Disaster = () => {
             ))}
           </div>
 
-          {/* Right Arrow */}
           <button
             onClick={() =>
               setCarouselIndex((prev) =>
-                prev === images.length - 3 ? 0 : prev + 1
+                prev === images.length - 3 ? 0 : prev + 1,
               )
             }
-            className="absolute right-0 z-10 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition"
+            className="absolute right-0 z-10 bg-black bg-opacity-50 text-white p-2 rounded-full"
           >
             <FaChevronRight />
           </button>
         </div>
       </div>
 
-      {/* Button */}
-      <div className="text-center py-6">
-        <Link
-          to="/disaster-funds"
-          className="px-6 py-3 bg-rose-400 text-black font-semibold rounded-lg shadow-lg hover:bg-black-700 transition inline-block"
-        >
-          SEE ALL DISASTER FUNDS
-        </Link>
-      </div>
-
-      {/* Our Approach Write-Up Section */}
+      {/* Approach Section */}
       <div className="bg-gray-200 text-black py-8 px-6 text-center max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-4">Our Approach</h2>
         <p className="max-w-4xl mx-auto leading-relaxed">
           Since 2021, <strong>Charlie Parker C. Global Foundation</strong> has
           responded to over 1,000 crises across 175+ countries, raising
           substantial funds to empower communities often overlooked and
-          underfunded. We stand apart by shifting power to local leaders,
-          removing barriers to equitable recovery, fostering trust, and
-          providing long-term support — ensuring communities are stronger and
-          better prepared for future challenges.
+          underfunded.
         </p>
       </div>
 
-      {/* 🎥 Video Placeholder Section */}
+      {/* Video */}
       <div className="max-w-6xl mx-auto py-12 px-6 flex justify-center">
         <div className="relative w-full max-w-4xl rounded-lg shadow-lg overflow-hidden">
           <video
@@ -229,58 +202,35 @@ const Disaster = () => {
             controls
             className="w-full h-64 md:h-96 lg:h-[500px] object-cover"
           />
-          <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 flex justify-between items-center">
-            <p className="text-white text-sm">Disaster Recovery Video</p>
-            <p className="text-white text-sm">▶️ Play</p>
-          </div>
         </div>
       </div>
 
-      {/* Hover Animation Cards Section */}
-      {/* Hover Animation Cards Section */}
+      {/* Cards (motion removed) */}
       <div className="max-w-6xl mx-auto py-12 px-6">
         <div className="grid md:grid-cols-3 gap-4 perspective-[1000px] relative">
           {[
             {
               title: "Empowering Local Leaders",
-              text: "We work directly with local leaders to ensure aid is relevant, timely, and effective for their communities.",
+              text: "We work directly with local leaders...",
               icon: (
                 <FaHandsHelping size={40} className="text-yellow-500 mb-4" />
               ),
             },
             {
               title: "Removing Barriers",
-              text: "Our foundation removes obstacles to recovery, making sure every community gets the support they need without delay.",
+              text: "Our foundation removes obstacles...",
               icon: <FaUnlockAlt size={40} className="text-yellow-500 mb-4" />,
             },
             {
               title: "Long-Term Support",
-              text: "We build sustainable recovery by providing continuous aid and guidance, helping communities prepare for future crises.",
+              text: "We build sustainable recovery...",
               icon: <FaSeedling size={40} className="text-yellow-500 mb-4" />,
             },
           ].map((card, index) => (
-            <motion.div
+            <div
               key={index}
-              onHoverStart={() => setHoveredIndex(index)}
-              onHoverEnd={() => setHoveredIndex(null)}
-              whileHover={{
-                scale: 1.05,
-                rotateY: 8,
-                rotateX: 4,
-                z: 20,
-                transition: { type: "spring", stiffness: 300, damping: 20 },
-              }}
-              animate={{
-                x:
-                  hoveredIndex === null
-                    ? 0
-                    : index === hoveredIndex
-                    ? -15
-                    : index < hoveredIndex
-                    ? -30
-                    : 30,
-              }}
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
               className="bg-white rounded-xl shadow-lg p-6 text-center cursor-pointer hover:shadow-2xl transform"
             >
               {card.icon}
@@ -288,32 +238,21 @@ const Disaster = () => {
                 {card.title}
               </h3>
               <p className="text-gray-700">{card.text}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
 
-      {/* ✅ How It Works Section */}
+      {/* How It Works (motion removed) */}
       <div className="py-12 px-6 bg-white">
-        {/* Heading above cards */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-3xl font-bold mb-4 text-black">How It Works</h2>
-          <p className="text-black">
-            We partner with thousands of locally led organizations around the
-            world to put crisis-affected communities in the driver's seat of
-            recovery.
-          </p>
         </div>
 
-        {/* Cards */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {howItWorks.map((item, idx) => (
-            <motion.div
+            <div
               key={idx}
-              ref={ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: idx * 0.2 }}
               className="bg-gray-100 rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition"
             >
               {item.icon}
@@ -321,24 +260,20 @@ const Disaster = () => {
                 Step {item.step}
               </h3>
               <p className="text-gray-700">{item.text}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
 
-      {/* FAQ Section */}
       <FAQ />
 
-      {/* Donate Now + Help Center Buttons */}
       <div className="text-center py-12 space-x-4">
         <Link
           to="/donate"
-          className="px-8 py-4 bg-gray-600 text-white font-bold rounded-lg shadow-lg hover:bg-yellow-700 transition inline-block"
+          className="px-8 py-4 bg-yellow-500 text-white font-bold rounded-lg shadow-lg hover:bg-yellow-700 transition inline-block"
         >
           Donate Now
         </Link>
-
-        
       </div>
     </div>
   );

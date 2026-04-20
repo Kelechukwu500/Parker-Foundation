@@ -125,7 +125,7 @@ const Nonprofits = () => {
       {/* Features Section */}
       <div className="max-w-6xl mx-auto py-16 px-6 mt-8">
         <h2 className="text-3xl font-bold text-center mb-12">
-          When your nonprofit partners with GlobalGiving, you get:
+          When your nonprofit partners with Parker's Foundation, you get:
         </h2>
 
         <motion.div
@@ -306,7 +306,7 @@ const Nonprofits = () => {
       <div className="text-center py-8">
         <Link
           to="/donate"
-          className="inline-block px-8 py-4 bg-black text-white text-xl rounded hover:bg-red-600"
+          className="inline-block px-8 py-4 bg-yellow-500 text-white text-xl rounded hover:bg-red-600"
         >
           Donate Now
         </Link>

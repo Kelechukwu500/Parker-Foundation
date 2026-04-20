@@ -115,7 +115,7 @@ const Story = () => {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="relative">
               <span className="absolute inset-0 bg-purple-600 h-14 w-full skew-x-[-12deg]"></span>
-              <h2 className="relative text-5xl font-extrabold text-white px-6">
+              <h2 className="relative text-3xl font-extrabold text-white px-6">
                 The Problem
               </h2>
             </div>
