@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { db } from "../Firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import emailjs from "emailjs-com";
-import flutterwave from "../assets/flutterwave.jpg";
-
+import paystack2 from "../assets/paystack2.jpg";
+import axios from "axios";
 
 const Donate = () => {
   const [amount, setAmount] = useState("");
@@ -26,7 +26,7 @@ const Donate = () => {
       email,
       amount,
       currency,
-      description, // <- added
+      description,
     };
 
     emailjs.send(
@@ -43,50 +43,35 @@ const Donate = () => {
       email,
       amount,
       currency,
-      description, // <- added
+      description,
       createdAt: serverTimestamp(),
     });
   };
 
   const handlePayment = () => {
-    if (!amount || !name || !email) {
-      alert("Please fill all fields");
+    if (!window.PaystackPop) {
+      alert("Paystack not loaded");
       return;
     }
 
-    window.FlutterwaveCheckout({
-      public_key: "FLWPUBK_TEST-xxxxxxxxxxxxx-X",
-      tx_ref: "donation-" + Date.now(),
-      amount: amount,
+    const handler = window.PaystackPop.setup({
+      key: "pk_live_f6480eb92816869cecc571512b302c0ac6f4602e",
+      email: email,
+      amount: Number(amount) * 100,
       currency: currency,
-      payment_options: "card,banktransfer,ussd",
-      customer: {
-        email: email,
-        name: name,
-      },
-      customizations: {
-        title: "Charlie Parker's C. Global Foundation",
-        description: "Support our mission",
-        logo: "https://via.placeholder.com/150",
+      reference: "donation_" + Date.now(),
+
+      callback: function (response) {
+        console.log("SUCCESS:", response.reference);
+        alert("Payment successful!");
       },
 
-      callback: async function (response) {
-        console.log(response);
-
-        // ✅ Save to Firebase
-        await saveDonation();
-
-        // ✅ Send Email Receipt
-        sendEmail();
-
-        // ✅ Show success UI
-        setSuccess(true);
-      },
-
-      onclose: function () {
+      onClose: function () {
         console.log("Payment closed");
       },
     });
+
+    handler.openIframe();
   };
 
   return (
@@ -116,7 +101,6 @@ const Donate = () => {
           </div>
         ) : (
           <>
-            {/* FORM SAME AS BEFORE */}
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2">
               Make a Donation ❤️
             </h2>
@@ -171,7 +155,6 @@ const Donate = () => {
               onChange={(e) => setAmount(e.target.value)}
             />
 
-            {/* Description */}
             <div className="mb-6">
               <label className="block text-gray-700 text-sm font-medium mb-1">
                 Description
@@ -186,21 +169,21 @@ const Donate = () => {
             </div>
 
             <button
+              type="button"
               onClick={handlePayment}
               className="w-full bg-yellow-500 text-black py-3 rounded font-bold"
             >
               Donate Now
             </button>
 
-            {/* Footer */}
             <div className="flex items-center justify-center gap-2 mt-4">
               <img
-                src={flutterwave}
-                alt="Flutterwave Logo"
+                src={paystack2}
+                alt="Paystack Logo"
                 className="w-5 h-5 object-contain"
               />
               <p className="text-xs text-gray-500 text-center">
-                Secure payments powered by Flutterwave
+                Secure payments powered by Paystack
               </p>
             </div>
           </>
