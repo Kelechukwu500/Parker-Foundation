@@ -1,7 +1,6 @@
 // Newsletter.jsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { db } from "../Firebase";
-import { collection, addDoc } from "firebase/firestore";
+
 
 const preferenceOptions = [
   { value: "updates", label: "Updates & News" },
@@ -63,24 +62,36 @@ const Newsletter = () => {
     setLoading(true);
 
     try {
-      await addDoc(collection(db, "subscribers"), {
-        email,
-        name,
-        preferences,
-        date: new Date(),
-      });
-
-      alert(
-        "Thank you for subscribing! Check your email for a welcome message.",
+      const res = await fetch(
+        "https://us-central1-parker-foundation.cloudfunctions.net/subscribeNewsletter",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            name,
+            preferences,
+          }),
+        },
       );
 
-      setEmail("");
-      setName("");
-      setPreferences("");
-      setDropdownOpen(false);
+      const data = await res.json();
+
+      if (data.success) {
+        alert(data.message);
+
+        setEmail("");
+        setName("");
+        setPreferences("");
+        setDropdownOpen(false);
+      } else {
+        alert(data.message);
+      }
     } catch (error) {
-      console.error("Error subscribing:", error);
-      alert("Failed to subscribe. Please try again.");
+      console.error(error);
+      alert("Failed to subscribe.");
     } finally {
       setLoading(false);
     }

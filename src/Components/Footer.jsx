@@ -186,7 +186,7 @@ const Footer = () => {
         <div className="pt-6 flex flex-col xl:flex-row xl:items-start xl:justify-between gap-5">
           <div className="space-y-1.5 max-w-2xl text-sm sm:text-base text-white/76 leading-relaxed">
             <p>
-              &copy; 2001–2026 Charlie Parker C. Global Foundation.{" "}
+              &copy; 2021–2026 Charlie Parker C. Global Foundation.{" "}
               <strong className="text-white">Built by Kaycee Tech</strong>.
             </p>
             <p>Registered in Nigeria RC159089</p>
