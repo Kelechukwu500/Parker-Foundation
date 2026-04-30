@@ -109,7 +109,7 @@ const Newsletter = () => {
 
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl">
                 Stay updated with the latest news, events, and exclusive
-                insights from Charlie Parker. Join our community and never miss
+                insights from our foundation. Join our community and never miss
                 a beat.
               </p>
             </div>

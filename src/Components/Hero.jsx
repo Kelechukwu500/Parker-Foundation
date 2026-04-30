@@ -192,7 +192,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
               <div>
                 <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 tracking-tight">
-                  Photo Carousel
+                  Photos
                 </h2>
                 <p className="text-base text-gray-500 mt-1">
                   Browse foundation moments in a smoother and more responsive gallery experience.
@@ -640,7 +640,7 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto text-center space-y-6 rounded-[30px] bg-gray-200 border border-black/5 px-5 sm:px-8 md:px-12 py-10 sm:py-14 shadow-[0_10px_35px_rgba(15,23,42,0.06)]">
           <h3 className="italic text-gray-700 text-2xl sm:text-3xl">Support students</h3>
           <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl text-gray-900 leading-tight tracking-tight">
-            <strong>Charlie Parker C. Global Foundation</strong> provides a comprehensive, holistic care approach to nurture and support students in every community.
+            <strong>Charlie Parker's C. Global Foundation</strong> provides a comprehensive, holistic care approach to nurture and support students in every community.
           </h2>
           <p className="text-gray-700 text-base leading-relaxed max-w-4xl mx-auto">
             Your support empowers students to enhance their academic, social, spiritual, and physical growth, while providing the educational tools they need to actively participate both inside and outside the classroom.

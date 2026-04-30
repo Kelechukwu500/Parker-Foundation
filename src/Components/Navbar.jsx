@@ -221,7 +221,7 @@ const Navbar = () => {
                 className="h-12 w-12 object-contain flex-shrink-0"
               />
               <span className="text-sm sm:text-base lg:text-xl font-bold text-black leading-tight">
-                Charlie Parker C. <br /> Global Foundation
+                Charlie Parker's C. <br /> Global Foundation
               </span>
             </Link>
 
